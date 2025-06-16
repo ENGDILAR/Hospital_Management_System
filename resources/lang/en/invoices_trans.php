@@ -1,0 +1,41 @@
+<?php
+
+return [
+
+'invoices'=>'invoices',
+'Add_New_Invoice'=>'Add New Invoice',
+'single_Service_invoice'=>'single Service invoice',
+'Group_Services_invoice'=>'Group Services invoice',
+
+
+"Section"=>'Section',
+   "Data_has_been_saved"=>'Data has been saved.',
+   "Data_has_been_edited"=>'Data has been edited.',
+   "choose_from_The_List"=>'choose from The List',
+   "Patient_name"=>'Patient Name',
+   "Doctor_name"=>'Doctor name',
+   "Invoice_Type"=>'Invoice Type',
+   "Cash"=>'Cash',
+   "Later"=>'Later',
+   "Service_Name"=>'Service Name',
+   "Service_Price"=>'Service Price',
+   "Discount_value"=>'Discount value',
+   "Tax_Rate"=>'Tax Rate',
+   "Tax_Value"=>'Tax Value',
+   "Total_with_Tax"=>'Total with Tax',
+   "Choose_Service"=>'Choose Service',
+   "Delete_invoice_Data"=>'Delete invoice Data',
+   "Invoice_Date"=>'Invoice Date',
+    "notes" => 'Notes',
+    "status" => 'Status',
+    "Processes" => 'Processes',
+    "save" => 'save',
+    "close" =>'close',
+    "Deleted" => 'Are You Sure That You Want To Delete',
+'Active'=>'Enable',
+'Notactive'=>'Disable',
+'All_Services'=>'All Services',
+'Activation_Status'=>'Activation Status',
+'Accounts'=>'Accounts',
+'Collection'=>'Collection',
+];
