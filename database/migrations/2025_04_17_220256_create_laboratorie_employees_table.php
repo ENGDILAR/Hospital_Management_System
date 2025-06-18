@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ray_employees', function (Blueprint $table) {
+        Schema::create('laboratorie_employees', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->nullable()->references('id')->on('users')->onDelete('cascade');     
+              $table->foreignId('user_id')->nullable()->references('id')->on('users')->onDelete('cascade');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ray_employees');
+        Schema::dropIfExists('laboratorie_employees');
     }
 };

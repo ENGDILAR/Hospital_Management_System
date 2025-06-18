@@ -37,6 +37,7 @@ class AuthenticatedSessionController extends Controller
               {
                       return redirect(RouteServiceProvider::Ray);
               } 
+              
               else if($request->user()->role==='lab')
               {
                       return redirect(RouteServiceProvider::Lab);

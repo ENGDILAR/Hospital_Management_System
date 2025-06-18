@@ -16,20 +16,7 @@ class userseeder extends Seeder
     public function run(): void
     {
    //  DB::table('users')->truncate();   
-        User::create([
-            'name' => 'Dilar',
-            'email' => 'diloalmmio@gmail.com',
-            'password' => bcrypt('12345678'),
-            'role' => 'user',
-        ]);
-        // إنشاء دكتور
-        User::create([
-            'name' => 'Doctor',
-            'email' => 'doctor@gmail.com',
-            'password' => bcrypt('12345678'),
-            'role' => 'doctor',
-        ]);
-
+ 
         // إنشاء أدمين
         User::create([
             'name' => 'Admin',

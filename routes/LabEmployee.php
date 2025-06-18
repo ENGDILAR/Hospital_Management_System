@@ -28,21 +28,16 @@ Route::group(
   });
 
 
- /////////////////### Ray dashboard ###///////////////////////
- Route::get('/dashboard/ray', function () {
-    return view('Dashboard.dashboard_RayEmployee.dashboard');
-})->middleware(['auth', 'verified','ray'])->name('dashboard.ray');
+ /////////////////### Lab dashboard ###///////////////////////
+ Route::get('/dashboard/Lab', function () {
+    return view('Dashboard.dashboard_LaboratorieEmployee.dashboard');
+})->middleware(['auth', 'verified','lab'])->name('dashboard.lab');
 
-  Route::middleware(['auth','verified','ray'])->group(function(){
+  Route::middleware(['auth','verified','lab'])->group(function(){
 
-    
-   //############################# invoices route ##########################################
-    Route::resource('invoices_ray_employee', InvoiceController::class);
-    Route::get('completed_invoices', [InvoiceController::class,'completed_invoices'])->name('completed_invoices');
-    Route::get('view_rays/{id}', [InvoiceController::class,'viewRays'])->name('view_rays');
-    
-
- //############################# end invoices route ######################################
+         Route::resource('invoices_laboratorie_employee', InvoiceController::class);
+     Route::get('completed_invoices', [InvoiceController::class,'completed_invoices'])->name('completed_invoices');
+     Route::get('view_laboratories/{id}', [InvoiceController::class,'view_laboratories'])->name('view_laboratories');
        
        
        });

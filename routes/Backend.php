@@ -4,6 +4,7 @@ use App\Http\Controllers\Dashboard\AmbulanceController;
 use App\Http\Controllers\dashboard\doctorcontroller;
 use App\Http\Controllers\dashboard\sectioncontroller;
 use App\Http\Controllers\dashboard\InsuranceController;
+use App\Http\Controllers\Dashboard\LaboratorieEmployeeController;
 use App\Http\Controllers\Dashboard\PatientController;
 use App\Http\Controllers\Dashboard\PaymentAccountController;
 use App\Http\Controllers\Dashboard\RayEmployeeController;
@@ -93,9 +94,8 @@ Route::middleware(['auth','verified','admin'])->group(function(){
  //############################# end RayEmployee route ######################################
 
 
- //############################# laboratorie_employee route ##########################################
 
- //Route::resource('laboratorie_employee', LaboratorieEmployeeController::class);
+ Route::resource('laboratorie_employee', LaboratorieEmployeeController::class);
 
 
 });

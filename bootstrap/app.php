@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\adminMidlleware;
 use App\Http\Middleware\doctorMiddlewere;
+use App\Http\Middleware\LabMiddleWere;
 use App\Http\Middleware\RayMiddleWere;
 use App\Http\Middleware\userMiddlewere;
 use Illuminate\Foundation\Application;
@@ -26,6 +27,7 @@ return Application::configure(basePath: dirname(__DIR__))
          'user'=>userMiddlewere::class,
           'doctor'=>doctorMiddlewere::class,
           'ray'=>RayMiddleWere::class,
+           'lab'=>LabMiddleWere::class,
           
     ]);
 })
