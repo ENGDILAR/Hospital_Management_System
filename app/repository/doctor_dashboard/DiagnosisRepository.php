@@ -11,6 +11,7 @@ class DiagnosisRepository implements DiagnosisRepositoryInterface
 {
     public function index()
     {
+        
     }
 
     public function store($request)

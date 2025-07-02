@@ -8,6 +8,7 @@ use App\Http\Controllers\Dashboard\PatientController;
 use App\Http\Controllers\Dashboard\PaymentAccountController;
 use App\Http\Controllers\Dashboard\RayEmployeeController;
 use App\Http\Controllers\Dashboard\ReceiptAccoutController;
+use App\Http\Controllers\Dashboard_Patient\PatientDashboardController;
 use App\Http\Controllers\singleservicecontroller;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Support\Facades\Route;
@@ -40,19 +41,12 @@ Route::middleware(['auth','verified','user'])->group(function(){
 Route::get('/dashboard/user', function () {
     return view('Dashboard.user.dashboard');
 })->name('dashboard.user');
-
-
-/*   //############################# patients route ##########################################
-        Route::get('invoices', [PatientController::class,'invoices'])->name('invoices.patient');
-        Route::get('laboratories', [PatientController::class,'laboratories'])->name('laboratories.patient');
-        Route::get('view_laboratories/{id}', [PatientController::class,'viewLaboratories'])->name('laboratories.view');
-        Route::get('rays', [PatientController::class,'rays'])->name('rays.patient');
-        Route::get('view_rays/{id}', [PatientController::class,'viewRays'])->name('rays.view');
-        Route::get('payments', [PatientController::class,'payments'])->name('payments.patient');
-        //############################# end patients route ######################################*/
-
-
-
+        Route::get('Patient/Dashboard/invoices', [PatientDashboardController::class,'invoices'])->name('PatientDash.invoices');
+        Route::get('Patient/Dashboard/laboratories', [PatientDashboardController::class,'laboratories'])->name('PatientDash.Laboratories');
+        Route::get('Patient/Dashboard/view_laboratories/{id}', [PatientDashboardController::class,'viewLaboratories'])->name('PatientDash.Laboratories.view');
+        Route::get('Patient/Dashboard/rays', [PatientDashboardController::class,'rays'])->name('PatientDash.rays');
+        Route::get('Patient/Dashboard/view_rays/{id}', [PatientDashboardController::class,'viewRays'])->name('PatientDash.rays.view');
+        Route::get('Patient/Dashboard/payments', [PatientDashboardController::class,'payments'])->name('PatientDash.payments');
 });
 
 

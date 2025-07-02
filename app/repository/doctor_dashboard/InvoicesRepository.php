@@ -14,6 +14,7 @@ class InvoicesRepository implements InvoicesRepositoryInterface
     public function index()
     {
          $id=Auth::user()->id;
+         
           $doctor = Doctor::where('user_id',$id)->firstOrfail();
       
       

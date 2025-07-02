@@ -98,7 +98,6 @@ public function update($request)
         session()->flash('edit');
         return redirect()->route('Receipt.index');
     }
-
     catch (\Exception $e) {
         DB::rollback();
         return redirect()->back()->withErrors(['error' => $e->getMessage()]);

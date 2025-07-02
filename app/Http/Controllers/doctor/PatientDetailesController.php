@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 class PatientDetailesController extends Controller
 {
     public function index($id){
+        
         $user_id=Auth::user()->id;
         $SignedDoctorID = Doctor::where('user_id',$user_id)->firstOrfail();
 

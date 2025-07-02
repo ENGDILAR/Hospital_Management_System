@@ -8,7 +8,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{route('doctor_Laboratories.create')}}" method="POST">
+            <form action="{{route('doctor_Laboratories.store')}}" method="POST">
             @csrf
             <div class="modal-body">
 

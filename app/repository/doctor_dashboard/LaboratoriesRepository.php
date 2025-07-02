@@ -10,6 +10,7 @@ class LaboratoriesRepository implements LaboratoriesRepositoryInterface
     public function store($request)
     {
         try {
+            $lab = new Laboratorie();
 
             Laboratorie::create([
                 'description'=>$request->description,

@@ -18,6 +18,7 @@ class InvoiceController extends Controller
 
     public function index()
     {
+
        return $this->invoices->index();
     }
 

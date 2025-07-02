@@ -23,10 +23,7 @@ class PatientRepository implements PatientRepositoryInterface
         $invoices = Invoice::where('patient_id', $id)->get();
         $receipt_accounts = ReceiptAccount::where('patient_id', $id)->get();
         $Patient_accounts = PatientAccounnt::where('patient_id', $id)
-        // Eager Loading To Slove N+1 Query 
-        // because in Foreach We Call this relations evere time the loop gets at end so 
-        // if you have a 100 row of pateintAccount You will call the quere 100+1 time
-        // but with Eager loadig we just use 2 Queries
+     
     ->with(['Single_Invoice.Service', 'ReceiptAccount', 'PaymentAccount'])
     ->get();
         return view('Dashboard.Patients.show', compact('Patient','invoices','receipt_accounts','Patient_accounts'));

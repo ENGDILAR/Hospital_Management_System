@@ -12,6 +12,7 @@ use App\interfaces\Finance\PaymentRepositoryInterface;
 use App\interfaces\Finance\ReceiptRepositoryInterface;
 use App\interfaces\insurance\insuranceRepositoryInterface;
 use App\interfaces\LabEmployee\LabEmployeeRepositoryInterface;
+use App\interfaces\LabEmployee_Dashboard\InvoicesRepositoryInterface as LabEmployee_DashboardInvoicesRepositoryInterface;
 use App\Interfaces\Patients\PatientRepositoryInterface;
 use App\interfaces\RayEmployee\RayEmployeeRepositoryInterface;
 use App\interfaces\RayEmployee_Dashboard\InvoicesRepositoryInterface as REInvoicesRepositoryInterface;
@@ -28,6 +29,7 @@ use App\repository\Doctors\DoctorRepository;
 use App\repository\Finance\PaymentRepository;
 use App\repository\Finance\ReceiptRepository;
 use App\repository\insurance\insuranceRepository;
+use App\repository\LabEmployee_Dashboard\InvoicesRepository as LabEmployee_DashboardInvoicesRepository;
 use App\repository\LaboratorieEmployee\LaboratorieEmployeeRepository;
 use App\Repository\Patients\PatientRepository;
 use App\repository\RayEmployee\RayEmployeeRepository;
@@ -53,19 +55,24 @@ class repositoryServiceProvider extends ServiceProvider
         $this->app->bind(ReceiptRepositoryInterface::class,ReceiptRepository::class);
         $this->app->bind(PaymentRepositoryInterface::class,PaymentRepository::class);
         $this->app->bind(RayEmployeeRepositoryInterface::class,RayEmployeeRepository::class);
-              $this->app->bind(LabEmployeeRepositoryInterface::class,LaboratorieEmployeeRepository::class);
+        $this->app->bind(LabEmployeeRepositoryInterface::class,LaboratorieEmployeeRepository::class);
 
 
              ######################### Doctor ##############################################
-             $this->app->bind(InvoicesRepositoryInterface::class,InvoicesRepository::class);
-             $this->app->bind(DiagnosisRepositoryInterface::class,DiagnosisRepository::class);
-             $this->app->bind(RaysRepositoryInterface::class,RaysRepository::class);
-             $this->app->bind(LaboratoriesRepositoryInterface::class,LaboratoriesRepository::class);
+        $this->app->bind(InvoicesRepositoryInterface::class,InvoicesRepository::class);
+        $this->app->bind(DiagnosisRepositoryInterface::class,DiagnosisRepository::class);
+        $this->app->bind(RaysRepositoryInterface::class,RaysRepository::class);
+        $this->app->bind(LaboratoriesRepositoryInterface::class,LaboratoriesRepository::class);
 
              
              ######################### Ray Employee ##############################################
 
-             $this->app->bind(REInvoicesRepositoryInterface::class,REInvoicesRepository::class);
+        $this->app->bind(REInvoicesRepositoryInterface::class,REInvoicesRepository::class);
+
+             
+             ######################### Lab Employee ##############################################
+
+             $this->app->bind(LabEmployee_DashboardInvoicesRepositoryInterface::class,LabEmployee_DashboardInvoicesRepository::class);
 
              
     }

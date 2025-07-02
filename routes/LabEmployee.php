@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\RayEmployee_Dashboard\InvoiceController;
+use App\Http\Controllers\LabEmployee_Dashboard\InvoiceController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
@@ -35,9 +35,9 @@ Route::group(
 
   Route::middleware(['auth','verified','lab'])->group(function(){
 
-         Route::resource('invoices_laboratorie_employee', InvoiceController::class);
-     Route::get('completed_invoices', [InvoiceController::class,'completed_invoices'])->name('completed_invoices');
-     Route::get('view_laboratories/{id}', [InvoiceController::class,'view_laboratories'])->name('view_laboratories');
+      Route::resource('invoices_laboratorie_employee', InvoiceController::class);
+     Route::get('Lab/completed_invoices', [InvoiceController::class,'completed_invoices'])->name('Lab.completed_invoices');
+     Route::get('view_laboratories/{id}', [InvoiceController::class,'view_laboratories'])->name('Lab.view_laboratories');
        
        
        });

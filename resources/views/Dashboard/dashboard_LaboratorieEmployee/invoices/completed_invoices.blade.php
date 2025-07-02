@@ -1,4 +1,4 @@
-@extends('Dashboard.layouts.master')
+@extends('Dashboard.layouts.master-lab')
 @section('title')
     الفواتير المكتملة
 @stop
@@ -43,7 +43,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration}}</td>
                                     <td>{{ $invoice->created_at }}</td>
-                                    <td><a href="{{route('view_laboratories',$invoice->id)}}">{{ $invoice->Patient->name }}</a></td>
+                                    <td><a href="{{route('Lab.view_laboratories',$invoice->id)}}">{{ $invoice->Patient->name }}</a></td>
                                     <td>{{ $invoice->doctor->name }}</td>
                                     <td>{{ $invoice->description }}</td>
                                     <td>

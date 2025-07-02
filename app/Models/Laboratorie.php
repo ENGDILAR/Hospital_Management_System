@@ -16,11 +16,11 @@ class Laboratorie extends Model
         return $this->belongsTo(Doctor::class,'doctor_id');
     }
 
-  /*  public function employee()
+    public function employee()
     {
         return $this->belongsTo(LaboratorieEmployee::class,'employee_id')
             ->withDefault(['name'=>'noEmployee']);
-    }*/
+    }
 
     public function Patient()
     {
